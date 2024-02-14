@@ -62,7 +62,8 @@ public class Main {
                     islemleri_bastir();
                     break;
                 case 1:
-                    if (!ileri) { //Bu koşulu çıktıda ikileme hatası olduktan sonra ekledik. //17
+                    if (!ileri) { /* Bu koşulu çıktıda ikileme hatası olduktan sonra ekledik. Normalde tek ilerleme vardı.
+                                     Tekrar yazdığımız bu if koşulu ile iki kere ilerlemiş olduk. */ //17
                         if (iterator.hasNext()) {
 
                             iterator.next();
@@ -81,7 +82,8 @@ public class Main {
                     }
                     break;
                 case 2:
-                    if (ileri) { // Hata sonrası ikinci eklememiz. //19
+                    if (ileri) { /* Hata sonrası ikinci eklememiz. Bu if koşulu ile, uygulamada bir adımda iki kere geri
+                                    gitmiş olacağız. Bundan dolayı şehirler iki kere gözükmemiş olacak. */ //19
 
                         if(iterator.hasPrevious()) {
 
